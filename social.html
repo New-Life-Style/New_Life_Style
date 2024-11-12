@@ -275,7 +275,7 @@ width: 100% !important;
         <td valign="top" align="center"><!--[if gte mso 9]><table width="550" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
         <table cellpadding="0" cellspacing="0" border="0" class="fluid-on-mobile img-wrap" style="max-width:100%;">
         <tbody><tr>
-        <td valign="top" align="center"><a href="https://chat.whatsapp.com/FhLSoCXC6jyJDepXAL5Qbg" class="imglink" target="_blank">
+        <td valign="top" align="center"><a id="whatsapplink" href="https://chat.whatsapp.com/FhLSoCXC6jyJDepXAL5Qbg" class="imglink" target="_blank">
         <img src="./mobile vector-4.png" width="550" height="97" alt="" border="0" style="display:block;font-size:14px;max-width:100%;height:auto;" class="width550">
         </a>
         </td>
@@ -309,5 +309,45 @@ width: 100% !important;
 </td>
 </tr>
 </tbody></table>
+    <script>
+    const url = window.location.search;
+    const params = new URLSearchParams(url);
+    let shop = params.get('q').toLowerCase();
+    //let shop1 = toString("sai-1").toLowerCase;
+
+    console.log(shop);
+   // let imgSrc = "https://t4.ftcdn.net/jpg/04/70/29/97/240_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg";
+    let whatsapp_link = "";
+    //var myImg = document.getElementById('insta');
+    var whatsapplink = document.getElementById('whatsapplink');
+    const myMap = new Map([
+        ["kin-gb", "https://chat.whatsapp.com/IzGs2VwhAHgDFQPFmKbBhF"]
+    ]);
+    if(myMap.has(shop) == true)
+    {
+        whatsapplink.href = myMap.get(shop);
+    }
+    else{
+        whatsapplink.href = "";
+    }
+    // if(shop=='sai-2')
+    // {
+    //     imgSrc = "./RES/mobile vector-1.png";
+    //     insta_link = "https://www.geeksforgeeks.org/how-to-create-an-image-element-dynamically-using-javascript/";
+    //     instaLink.innerHTML = "geeksforgeeks";
+    //     instaLink.href = insta_link;
+    //     myImg.src = imgSrc;
+    // }
+    //     // document.getElementById("insta").scr="C:\Users\RAHUL\Desktop\shivam\CATALOG\github\github id pass-2.jpg"
+    // else
+    // {
+    //     insta_link = "https://developer.mozilla.org/en-US/docs/Web/API/Location/search";
+    //     instaLink.innerHTML = "developer";
+    //     instaLink.href = insta_link;
+    //     myImg.src = imgSrc;
+    // }
+    
+</script>
+
 
 </body></html>
